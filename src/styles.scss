@@ -1,0 +1,33 @@
+@import 'variables';
+@import '../node_modules/font-awesome/scss/font-awesome';
+@import "../node_modules/bootswatch/dist/cerulean/variables";
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import "../node_modules/bootswatch/dist/cerulean/bootswatch";
+
+.title{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.menu {
+  padding-top: 10px;
+  text-align: left;
+}
+
+.form-section {
+  border: 1px solid lightgrey;
+  padding: 5px
+}
+
+label {
+  color: navy;
+}
+
+.menu-btn {
+  text-align: left;
+}
+
+.dropdown-menu {
+  max-height: 250px;
+  overflow: scroll;
+}

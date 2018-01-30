@@ -1,0 +1,83 @@
+<form>
+
+  <h4>My Contact Info</h4>
+  <div class="form-section">
+    <div class="form-group">
+      <h5>Primary Residence</h5>
+    </div>
+    <div class="form-group">
+      <label for="address">Address line 1</label>
+      <input type="text" class="form-control" id="address" placeholder="address">
+    </div>
+
+    <div class="form-group">
+      <label for="address2">Address line 2</label>
+      <input type="text" class="form-control" id="address2" placeholder="address line 2">
+    </div>
+
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" class="form-control" id="city" placeholder="city">
+    </div>
+
+    <div class="form-group">
+      <label>State</label><br>
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="statelist" ngbDropdownToggle>{{selectedState ? selectedState.value : ''}}</button>
+        <div ngbDropdownMenu aria-labelledby="statelist">
+          <button class="dropdown-item" *ngFor="let state of states" (click)="changeState(state)" >{{state.value}}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="zip">Zip</label>
+      <input type="text" class="form-control" id="zip" placeholder="zip">
+    </div>
+
+    <div class="row form-group">
+      <div class="col">
+        <label for="dayphone">Daytime Phone</label>
+        <input type="text" class="form-control" id="dayphone" placeholder="###-###-####">
+      </div>
+
+      <div class="col">
+        <label for="dayphonetype">Phone Type</label><br>
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="dayphonetype" ngbDropdownToggle>{{selectedDayPhone}}</button>
+          <div ngbDropdownMenu aria-labelledby="dayphonetype">
+            <button class="dropdown-item" *ngFor="let phoneType of phoneTypes" (click)="selectedDayPhone = phoneType" >{{phoneType}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col">
+        <label for="eveningphone">Evening Phone</label>
+        <input type="text" class="form-control" id="eveningphone" placeholder="###-###-####">
+      </div>
+      <div class="col">
+        <label for="eveningphonetype">Phone Type</label><br>
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="eveningphonetype" ngbDropdownToggle>{{selectedEveningPhone}}</button>
+          <div ngbDropdownMenu aria-labelledby="eveningphonetype">
+            <button class="dropdown-item" *ngFor="let phoneType of phoneTypes" (click)="selectedEveningPhone = phoneType" >{{phoneType}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="textMobile" value="true">
+        <label class="form-check-label" for="textMobile">Can we send you text messages to your mobile phone(s)?</label>
+      </div>
+    </div>
+
+    <div class="form-group" style="padding-top: 20px">
+      <button type="button" class="btn btn-secondary">Save</button>
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>

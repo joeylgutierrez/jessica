@@ -1,0 +1,26 @@
+<div class="row" class="title">
+  <div class="col-12 d-flex justify-content-center">
+    <h2>Medical Power of Attorney</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-2 menu">
+
+    <div class="btn-group-vertical btn-group-toggle" style="width: 180px" ngbRadioGroup name="radioBasic" [(ngModel)]="selectedMenuItem">
+      <label ngbButtonLabel class="btn-primary menu-btn">
+        <input ngbButton type="radio" value="identity" [routerLink]="['/poa/identity']" routerLinkActive="active"> My Identity <i class="fa fa-check-circle"></i>
+      </label>
+      <label ngbButtonLabel class="btn-primary menu-btn">
+        <input id="contactInfo" ngbButton type="radio" value="contactInfo" [routerLink]="['/poa/contact-info']" routerLinkActive="active"> My Contact Info
+      </label>
+      <label ngbButtonLabel class="btn-primary menu-btn">
+        <input ngbButton type="radio" value="traits" [routerLink]="['/poa/traits']" routerLinkActive="active"> My Physical Traits
+      </label>
+    </div>
+  </div>
+
+  <div class="col-10">
+    <router-outlet></router-outlet>
+  </div>
+</div>
